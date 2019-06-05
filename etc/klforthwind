@@ -1,0 +1,49 @@
+#certbot --nginx -d klforthwind.com -d klforthwind.org -d klforthwind.net -d forthwind.dev
+
+server {
+
+	listen 443 ssl;
+
+	ssl_certificate /etc/letsencrypt/live/www.klforthwind.com/fullchain.pem; # managed by Certbot
+	ssl_certificate_key /etc/letsencrypt/live/www.klforthwind.com/privkey.pem; # managed by Certbot
+
+	server_name www.klforthwind.com www.klforthwind.net www.klforthwind.org;
+
+	access_log /home/clients/klforthwind/logs/access.log;
+	error_log /home/clients/klforthwind/logs/error.log;
+
+	location / {
+		root   /home/clients/klforthwind/www/;
+		index  index.html index.php;
+
+		error_page 405 = $uri;
+	}
+
+	location ~* \.(jpg|jpeg|png|gif|ico|css|js)$ {
+		expires 1M;
+		access_log off;
+		add_header Cache-Control "public";
+		root /home/clients/klforthwind/www/;
+	}
+
+	location ~ \.php$ {
+		root   /home/clients/klforthwind/www/;
+    	include snippets/fastcgi-php.conf;
+    	fastcgi_pass unix:/var/run/php/php7.2-fpm.sock;
+	}
+}
+
+server {
+    listen 443;
+    server_name klforthwind.com klforthwind.net klforthwind.org;
+	add_header Cache-Control "public";
+	return 301 https://www.$host$request_uri;
+}
+
+server {
+	listen 80;
+	listen [::]:80;
+	server_name klforthwind.com klforthwind.net klforthwind.org;
+	add_header Cache-Control "public";
+	return 301 https://www.$host$request_uri;
+}
