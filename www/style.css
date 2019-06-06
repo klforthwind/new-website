@@ -1,0 +1,29 @@
+h1 {
+	font-size: 26px;
+}
+
+h2 {
+	font-size: 20px;
+}
+
+body, h1 {
+    color: #8AD1FD;
+}
+
+#container {
+    padding-top: 10%;
+}
+
+a {
+    color: #5e9fc7;
+}
+
+#links {
+    margin-top: 30px;
+}
+
+@media only screen and (max-width: 600px) {
+    #container{
+        padding: 40px;
+    }
+}
