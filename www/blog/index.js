@@ -72,14 +72,20 @@ app.engine('hbs', handlebars({
 app.set('view engine', 'hbs');
 
 app.get('/blog/', (req, res) => {
-    res.render("main");
+    let str = "";
+    for (let i = 0; i < db.length; i++) {
+        str += "<a href=\""+db[i].url+"\"/><ul id=\"clickable\">"+db[i].title+"<aside>"+db[i].date+"</aside></ul></a>";
+    }
+    res.render("main", {
+        blog_data: str
+    });
 });
 
 app.get('/blog/:post', (req, res) => {
-    const loc = "posts/" + req.params.post + ".md";
+    let loc = "posts/" + req.params.post + ".md";
     console.log(loc);
-    const str = fs.readFileSync(loc, "utf8");
-    const result = markdown.makeHtml(str);
+    let str = fs.readFileSync(loc, "utf8");
+    let result = markdown.makeHtml(str);
     res.render("main", {
         post_data: result
     });
