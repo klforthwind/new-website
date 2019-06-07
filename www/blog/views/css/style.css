@@ -1,0 +1,86 @@
+body, h1, a, ul {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #5e9fc7;
+}
+
+h2, aside {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #5e9fc7;
+}
+
+h1 {
+    text-align: center;
+    font-weight: 300;
+    font-size: 32px;
+    line-height: 1.4em;
+}
+
+h2 {
+    font-size: 22px;
+    text-align: center;
+    font-weight: 200;
+}
+
+h5, h6 {
+    margin: 0px
+}
+
+h6, h6 a {
+    font-size: 11px;
+}
+
+#rc {
+	padding-bottom: 20px;
+	margin: 0 auto 0 auto;
+}
+
+a ul {
+    font-weight: bold;
+}
+
+#clickable:hover {
+    color: #cccccc;
+}
+
+hr {
+    border: 0px;
+}
+
+#root, p {
+    text-align: left;
+    line-height: 1.7;
+    font-size: 17px;
+    text-align: justify;
+}
+
+aside {
+    position: relative;
+    float: right;
+    font-size: 17px;
+}
+
+@media only screen and (max-width: 600px) {
+    aside {
+        display: none;
+    }
+
+    #root, p {
+        line-height: 1.4;
+        font-size: 15px;
+    }
+
+    li {
+        text-align: left;
+    }
+}
+
+#clickable {
+    list-style-position: inside;
+    padding: 25px;
+    border: 2px dotted #444444;
+    text-align: left;
+}
+
+#picture {
+    padding-top: 10%;
+}
