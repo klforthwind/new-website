@@ -8,7 +8,9 @@ app.get('/blog/', (req, res) => {
 });
 
 app.get('/blog/:post', (req, res) => {
-    let str = fs.readFileSync(`${req.params.name}.md`, "utf8");
+    let loc = "posts/" + req.params.post + ".md";
+    console.log(loc);
+    let str = fs.readFileSync(loc, "utf8");
     let result = markdown.makeHtml(str);
     console.log(result);
     res.send(result);
