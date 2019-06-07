@@ -1,4 +1,4 @@
-#First Post
+# First Post
 ## 05/24/2019
 
 Started making this "little" blog, although I probably have put in more effort than I should've towards creating it.
@@ -11,5 +11,5 @@ See you then!
 
 :)
 
-#####Sources:
-######None
+##### Sources:
+###### None
