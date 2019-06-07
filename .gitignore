@@ -2,3 +2,5 @@
 logs/
 
 www/blog/node_modules/
+
+www/blog/nohup\.out
