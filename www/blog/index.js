@@ -1,5 +1,6 @@
+var markdown = require("markdown-js");
 const express = require("express");
-const markdown = require("markdown");
+var fs = require("fs");
 const app = express();
 
 app.get('/blog/', (req, res) => {
@@ -7,7 +8,10 @@ app.get('/blog/', (req, res) => {
 });
 
 app.get('/blog/:post', (req, res) => {
-    res.send(`This is the ${req.params.name} Post!`);
+    let str = fs.readFileSync(`${req.params.name}.md`, "utf8");
+    let result = markdown.makeHtml(str);
+    console.log(result);
+    res.send(result);
 });
 
 app.listen(3000);
