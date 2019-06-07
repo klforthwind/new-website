@@ -8,6 +8,11 @@ const app = express();
 
 let db = [
     {
+        "title": "I'm Graduating!",
+        "url": "graduation",
+        "date": "June 7st"
+    },
+    {
         "title": "OSI Seven Layer Model",
         "url": "osi-model",
         "date": "June 1st"
