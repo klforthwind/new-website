@@ -1,5 +1,5 @@
-#HTTP Statuses
-##05/29/2019
+# HTTP Statuses
+## 05/29/2019
 
 I got all of this information from HTTP Statuses. The website does a much better job at explaining every status code, but I wanted to integrate it into my website because status codes are really important in my opinion towards understanding web framework structures. Here's the link:
 
@@ -89,5 +89,5 @@ Once again, here's the link:
 
 :)
 
-#####Sources:
-######[HTTP Statuses](https://httpstatuses.com/ "List of HTTP Statuses")
+##### Sources:
+###### [HTTP Statuses](https://httpstatuses.com/ "List of HTTP Statuses")

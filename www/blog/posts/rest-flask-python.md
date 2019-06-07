@@ -1,5 +1,5 @@
-#REST Api Using Python Flask
-##05/29/2019
+# REST Api Using Python Flask
+## 05/29/2019
 
 ![Python Flask](https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Flask_logo.svg/220px-Flask_logo.svg.png "A python web framework")
 
@@ -59,5 +59,5 @@ After running this file you should be able to access the rest api at IP_ADDRESS:
 
 [Example Code](https://github.com/klforthwind/blog-examples/blob/master/rest-flask-api/rest.py "Python Flask REST Api")
 
-#####Sources:
-######None
+##### Sources:
+###### None

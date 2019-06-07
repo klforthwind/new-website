@@ -1,4 +1,4 @@
-#How I Set Up This Blog
+# How I Set Up This Blog
 ## 05/27/2019
 
 Before you read further, I would like you to know that I was very dumb when I decided to make a blog like this. Clearly, there was a much simpler way towards creating a blog like this, but I was thinking to myself that I could lower the work needed to show every new post in the future whenever I needed to upload another one. And I wanted to save on storage space :P 
@@ -26,8 +26,8 @@ Overall, I was really happy with it, although it took longer than I wish it woul
 :)
 
 
-#####Sources:
-######[Python Markdown by trentm](https://github.com/trentm/python-markdown2 "Used for converting the markdown files")
-######[Running Flask Over HTTPS by Miguel Grindberg](https://blog.miguelgrinberg.com/post/running-your-flask-application-over-https "Used to make CORS not hate me")
-######[Markdown Cheatsheet by adam-p](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet "Used for the markdown files")
-######[Pygment.css by richleland](https://github.com/richleland/pygments-css "Used to color code blocks")
+##### Sources:
+###### [Python Markdown by trentm](https://github.com/trentm/python-markdown2 "Used for converting the markdown files")
+###### [Running Flask Over HTTPS by Miguel Grindberg](https://blog.miguelgrinberg.com/post/running-your-flask-application-over-https "Used to make CORS not hate me")
+###### [Markdown Cheatsheet by adam-p](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet "Used for the markdown files")
+###### [Pygment.css by richleland](https://github.com/richleland/pygments-css "Used to color code blocks")

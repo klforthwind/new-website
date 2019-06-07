@@ -69,6 +69,7 @@ app.engine('hbs', handlebars({
     layoutsDir: path.join(__dirname, '/views'),
     extname: ".hbs"
 }));
+
 app.set('view engine', 'hbs');
 
 app.get('/blog/', (req, res) => {

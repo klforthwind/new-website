@@ -1,5 +1,5 @@
-#OSI Seven Layer Model
-##06/01/2019
+# OSI Seven Layer Model
+## 06/01/2019
 
 OSI (Open Source Interconnection) 7 Layer Model
 
@@ -132,5 +132,5 @@ Layer One: Physical
 
 :)
 
-#####Sources:
-######None
+##### Sources:
+###### None

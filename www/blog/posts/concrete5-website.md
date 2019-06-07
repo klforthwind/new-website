@@ -1,4 +1,4 @@
-#Apache2 Concrete5 Website Setup With phpMyAdmin
+# Apache2 Concrete5 Website Setup With phpMyAdmin
 ## 05/26/2019
 
 1. SSH into server that will hold the website.
@@ -50,5 +50,5 @@
 11. Done! :)
 
 
-#####Sources:
-######None
+##### Sources:
+###### None
