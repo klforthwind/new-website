@@ -8,9 +8,14 @@ const app = express();
 
 let db = [
     {
+        "title": "Blog Switch From Python Flask to NodeJS React",
+        "url": "blog-language-switch",
+        "date": "June 8th"
+    },
+    {
         "title": "I'm Graduating!",
         "url": "graduation",
-        "date": "June 7st"
+        "date": "June 7th"
     },
     {
         "title": "OSI Seven Layer Model",
