@@ -8,6 +8,11 @@ const app = express();
 
 let db = [
     {
+        "title": "AVR != ARM",
+        "url": "avr-arm",
+        "date": "July 9th"
+    },
+    {
         "title": "Blog Switch From Python Flask to NodeJS React",
         "url": "blog-language-switch",
         "date": "June 8th"
