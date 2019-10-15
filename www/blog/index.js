@@ -105,21 +105,22 @@ app.get('/blog/', (req, res) => {
 app.get('/blog/:post', (req, res) => {
     let loc = "posts/" + req.params.post + ".md";
     console.log(loc);
-    let str = fs.readFileSync(loc, "utf8");
-    let result = markdown.makeHtml(str);
-    res.render("main", {
-        post_data: result
-    });
-});
-
-app.use((req, res) => {
-    let str = "";
-    for (let i = 0; i < db.length; i++) {
-        str += "<a href=\""+db[i].url+"\"/><ul id=\"clickable\">"+db[i].title+"<aside>"+db[i].date+"</aside></ul></a>";
+    try {
+        let str = fs.readFileSync(loc, "utf8");
+        let result = markdown.makeHtml(str);
+        res.render("main", {
+            post_data: result
+        });
+    } catch(error) {
+        let str = "";
+        for (let i = 0; i < db.length; i++) {
+            str += "<a href=\""+db[i].url+"\"/><ul id=\"clickable\">"+db[i].title+"<aside>"+db[i].date+"</aside></ul></a>";
+        }
+        res.render("main", {
+            blog_data: str
+        });
     }
-    res.render("main", {
-        blog_data: str
-    });
+    
 });
 
 app.listen(3000);
