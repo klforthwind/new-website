@@ -39,4 +39,4 @@ app.get('/blog/:post', (req, res) => {
     
 });
 
-app.listen(4523);
+app.listen(3000);
