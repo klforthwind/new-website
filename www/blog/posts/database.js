@@ -76,3 +76,13 @@ exports.db = [
         "date": "May 24th"
     }
 ]
+
+exports.getPostList = function() {
+    let str = "";
+    for (let i = 0; i < exports.db.length; i++) {
+        str += "<a href=\""+exports.db[i].url+
+        "\"/><ul id=\"clickable\">"+exports.db[i].title+
+        "<aside>"+exports.db[i].date+"</aside></ul></a>";
+    }
+    return str;
+}

@@ -15,11 +15,7 @@ app.engine('hbs', handlebars({
 app.set('view engine', 'hbs');
 
 app.get('/blog/', (req, res) => {
-    let str = "";
-	console.log(db.db);
-    for (let i = 0; i < db.db.length; i++) {
-        str += "<a href=\""+db.db[i].url+"\"/><ul id=\"clickable\">"+db.db[i].title+"<aside>"+db.db[i].date+"</aside></ul></a>";
-    }
+    let str = db.getPostList();
     res.render("main", {
         blog_data: str
     });
@@ -35,10 +31,7 @@ app.get('/blog/:post', (req, res) => {
             post_data: result
         });
     } catch(error) {
-        let str = "";
-        for (let i = 0; i < db.db.length; i++) {
-            str += "<a href=\""+db.db[i].url+"\"/><ul id=\"clickable\">"+db.db[i].title+"<aside>"+db.db[i].date+"</aside></ul></a>";
-        }
+        let str = getPostList();
         res.render("main", {
             blog_data: str
         });
@@ -46,4 +39,4 @@ app.get('/blog/:post', (req, res) => {
     
 });
 
-app.listen(3000);
+app.listen(4523);
