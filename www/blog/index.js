@@ -8,6 +8,11 @@ const app = express();
 
 let db = [
     {
+        "title": "Another Update On The Blog",
+        "url": "update07132019",
+        "date": "July 13th"
+    },
+    {
         "title": "AVR != ARM",
         "url": "avr-arm",
         "date": "July 9th"
