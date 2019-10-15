@@ -107,4 +107,14 @@ app.get('/blog/:post', (req, res) => {
     });
 });
 
+app.use((req, res) => {
+    let str = "";
+    for (let i = 0; i < db.length; i++) {
+        str += "<a href=\""+db[i].url+"\"/><ul id=\"clickable\">"+db[i].title+"<aside>"+db[i].date+"</aside></ul></a>";
+    }
+    res.render("main", {
+        blog_data: str
+    });
+});
+
 app.listen(3000);
