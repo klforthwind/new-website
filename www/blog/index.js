@@ -31,7 +31,7 @@ app.get('/blog/:post', (req, res) => {
             post_data: result
         });
     } catch(error) {
-        let str = getPostList();
+        let str = db.getPostList();
         res.render("main", {
             blog_data: str
         });
