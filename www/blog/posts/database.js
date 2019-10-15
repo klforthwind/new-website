@@ -1,5 +1,5 @@
 // database.js
-module.exports.database = [
+exports.db = [
     {
         "title": "Another Update On The Blog",
         "url": "update07132019",

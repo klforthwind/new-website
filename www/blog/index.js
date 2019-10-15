@@ -3,7 +3,7 @@ const markdown = require("markdown-js");
 const express = require("express");
 const path = require("path");
 const fs = require("fs");
-const db = require('posts/database');
+const db = require('./posts/database');
 const app = express();
 
 app.engine('hbs', handlebars({
@@ -16,8 +16,9 @@ app.set('view engine', 'hbs');
 
 app.get('/blog/', (req, res) => {
     let str = "";
-    for (let i = 0; i < db.length; i++) {
-        str += "<a href=\""+db[i].url+"\"/><ul id=\"clickable\">"+db[i].title+"<aside>"+db[i].date+"</aside></ul></a>";
+	console.log(db.db);
+    for (let i = 0; i < db.db.length; i++) {
+        str += "<a href=\""+db.db[i].url+"\"/><ul id=\"clickable\">"+db.db[i].title+"<aside>"+db.db[i].date+"</aside></ul></a>";
     }
     res.render("main", {
         blog_data: str
@@ -35,8 +36,8 @@ app.get('/blog/:post', (req, res) => {
         });
     } catch(error) {
         let str = "";
-        for (let i = 0; i < db.length; i++) {
-            str += "<a href=\""+db[i].url+"\"/><ul id=\"clickable\">"+db[i].title+"<aside>"+db[i].date+"</aside></ul></a>";
+        for (let i = 0; i < db.db.length; i++) {
+            str += "<a href=\""+db.db[i].url+"\"/><ul id=\"clickable\">"+db.db[i].title+"<aside>"+db.db[i].date+"</aside></ul></a>";
         }
         res.render("main", {
             blog_data: str
