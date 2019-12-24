@@ -26,7 +26,7 @@ which will create a package.json file, looking somewhat like this:
   "license": "ISC"
 }
 ```
-Basically the most important field in this json file is main, since that lets npm know that  index.js will be requiring certain node modules. To install a node module, you need type
+Basically the most important field in this json file is main, since that lets npm know that index.js will be requiring certain node modules. To install a node module, you need type
 ```sh
 npm install ____
 ```
