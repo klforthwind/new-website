@@ -1,6 +1,11 @@
 // database.js
 exports.db = [
     {
+        "title": "Be Careful Seeding Randomness",
+        "url": "seeding-randomness",
+        "date": "December 23rd"
+    },
+    {
         "title": "Another Update On The Blog",
         "url": "update07132019",
         "date": "July 13th"
